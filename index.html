@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvtoSkaner.uz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./avtoskanerlogo.png">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <nav>
+                <img class="logo" src="./avtoskanerlogo.png" alt="logo">
+                <ul id="nav-links">
+                    <li><a href="#Biz_haqimizda">Biz haqimizda</a></li>
+                    <li><a href="#Maxsulotlar">Maxsulotlar</a></li>
+                    <li><a href="#yangiliklar">Yangiliklar</a></li>
+                    <li><a href="#yordam">Yordam</a></li>
+                    <li><a href="#aloqa">Aloqa</a></li>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 14 14">
+                        <path fill="none" stroke="#888888" stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 2H.5m13 5H.5m13 5H.5" />
+                    </svg>
+                </a>
+                <div class="icons_nav">
+                    <a href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 64 64">
+                            <path fill="#42ade2" d="M32 2C19.3 2 8.5 9.9 4.1 21h55.8C55.5 9.9 44.7 2 32 2" />
+                            <path fill="#83bf4f" d="M32 62c12.7 0 23.5-7.9 27.9-19H4.1C8.5 54.1 19.3 62 32 62" />
+                            <path fill="#fff"
+                                d="M62 32c0-3.1-.5-6.2-1.4-9H3.4C2.5 25.8 2 28.9 2 32s.5 6.2 1.4 9h57.2c.9-2.8 1.4-5.9 1.4-9" />
+                            <g fill="#c94747">
+                                <path d="M59.9 21c.1.3.3.7.4 1c.1.3.2.7.3 1" />
+                                <path
+                                    d="M60.3 22c-.1-.3-.3-.7-.4-1H4.1c-.1.3-.3.7-.4 1c-.1.3-.2.7-.3 1h57.2c-.1-.3-.2-.7-.3-1M3.7 42c.1.3.3.7.4 1h55.8c.1-.3.3-.7.4-1c.1-.3.2-.7.3-1H3.4c.1.3.2.7.3 1" />
+                            </g>
+                            <path fill="#fff"
+                                d="M20.4 17.3c-2.4 0-4.3-1.9-4.3-4.3s1.9-4.3 4.3-4.3c.6 0 1.1.1 1.6.3c-.8-.6-1.9-1-3-1c-2.8 0-5 2.2-5 5s2.2 5 5 5c1.1 0 2.2-.4 3-1c-.5.2-1 .3-1.6.3m4.3-2.1l.4 1.1h1.1l-.9.6l.3 1.1l-.9-.7l-.9.7l.4-1.1l-.9-.6h1.1zm4.3 0l.3 1.1h1.2l-.9.6l.3 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.1zm4.3 0l.3 1.1h1.1l-.9.6l.4 1.1l-.9-.7l-1 .7l.4-1.1l-.9-.6h1.1zm4.2 0l.4 1.1H39l-.9.6l.3 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.2zm4.3 0l.3 1.1h1.2l-1 .6l.4 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.1zM29 11.6l.3 1.1h1.2l-.9.6l.3 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.1zm4.3 0l.3 1.1h1.1l-.9.6l.4 1.1l-.9-.7l-1 .7l.4-1.1l-.9-.6h1.1zm4.2 0l.4 1.1H39l-.9.6l.3 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.2zm4.3 0l.3 1.1h1.2l-1 .6l.4 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.1zM33.3 8l.3 1.1h1.1l-.9.6l.4 1.1l-.9-.7l-1 .7l.4-1.1l-.9-.6h1.1zm4.2 0l.4 1.1H39l-.9.6l.3 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.2zm4.3 0l.3 1.1h1.2l-1 .6l.4 1.1l-.9-.7l-.9.7l.3-1.1l-.9-.6h1.1z" />
+                        </svg></a>
+                    <a href="./russia.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 64 64">
+                            <path fill="#f9f9f9" d="M31.9 2c-13 0-24.1 8.4-28.2 20h56.6C56.1 10.4 45 2 31.9 2" />
+                            <path fill="#ed4c5c" d="M31.9 62c13.1 0 24.2-8.4 28.3-20H3.7c4.1 11.7 15.2 20 28.2 20" />
+                            <path fill="#428bc1"
+                                d="M3.7 22C2.6 25.1 2 28.5 2 32s.6 6.9 1.7 10h56.6c1.1-3.1 1.7-6.5 1.7-10s-.6-6.9-1.7-10z" />
+                        </svg></a>
+                </div>
+            </nav>
+
+            <header id="Biz_haqimizda">
+                <div class="text_header">
+                    <div>
+                        <p>300+ hamkorlarga eng O`zbekistondagi eng zo`r do`kon</p>
+                        <h1>Arzon narxdagi eng sifatli "avtoscaner"lar</h1>
+                    </div>
+                    <button><a href="#aloqa">Batafsil malumot</a></button>
+                </div>
+                <div class="images_header"></div>
+            </header>
+        </div>
+
+        <div id="Maxsulotlar" class="sales">
+            <h1>Maxsulotlar</h1>
+
+            <div class="sales-images">
+                <div class="item-1">
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-1"></div>
+                        <div class="text-sales">
+                            <p>Professional avtomatik skaner THINKTOOL MAX</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>44 508 800 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-2"></div>
+                        <div class="text-sales">
+                            <p>Thinkcar T-Wand 200 TPMS bosim sensori dasturchisi</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>1 467 200 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-3"></div>
+                        <div class="text-sales">
+                            <p>Elektr avtomobil diagnostikasi vositasi iSmartEV P03 5in1</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>32 635 980 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-4"></div>
+                        <div class="text-sales">
+                            <p>Thinkcar GDI 100 injektorlarini sinash va tozalash uchun stend</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>11 110 400 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-5"></div>
+                        <div class="text-sales">
+                            <p>THINKTOOL Expert 195 Thinkcar 2024</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>14 806 400 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-6"></div>
+                        <div class="text-sales">
+                            <p>ThinkTool Lite 2 / 2024 / Thinkcar</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>8 030 400 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-7"></div>
+                        <div class="text-sales">
+                            <p>Launch стенд CNC-603 LITE</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>3 953 975 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-8"></div>
+                        <div class="text-sales">
+                            <p>THINKCAR ThinkTool MASTER X avtomobil diagnostikasi skaneri</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>29 590 400 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-9"></div>
+                        <div class="text-sales">
+                            <p>Thinkcar Thinktool CE EVD - elektr transport vositalari uchun avtomatik skaner</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>49 392 000 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-10"></div>
+                        <div class="text-sales">
+                            <p>LAUNCH CNC - 603 Yangi</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>5 648 535 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-11"></div>
+                        <div class="text-sales">
+                            <p>ML101 LAVR 1 l / Ln2001 (24+ "optomga" kelishamiz)</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>133 000 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-12"></div>
+                        <div class="text-sales">
+                            <p>Scanmatik 2 PRO, yangi, original</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>4 895 397 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-13"></div>
+                        <div class="text-sales">
+                            <p>Launch CNC-602A ультразвуковой очистки всех типов форсунок</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>5 584 476 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-14"></div>
+                        <div class="text-sales">
+                            <p>Модуль проверки АКБ Thinkeasy 2 (clip)</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>845 600 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-15"></div>
+                        <div class="text-sales">
+                            <p>ThinkTool Master X2 / 2024</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>32 200 000 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-16"></div>
+                        <div class="text-sales">
+                            <p>Professional avtomatik skaner THINKTOOL MAX basic</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>49 470 400 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-17"></div>
+                        <div class="text-sales">
+                            <p>Can-FD adapteri THINKCAR diagnostika adapteri</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>1 456 000 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <!-- Obed time -->
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-18"></div>
+                        <div class="text-sales">
+                            <p>HD Package for THINKCAR Master 2</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>11 760 000 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-19"></div>
+                        <div class="text-sales">
+                            <p>Master X MAX uchun THINKCAR HD to'plami</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>9 251 200 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-20"></div>
+                        <div class="text-sales">
+                            <p>Spin HL26 DL2 faralarini tekshirish va sozlash uchun qurilma (Italiya)</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>12 947 200 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-21"></div>
+                        <div class="text-sales">
+                            <p>Bo'yoq qalinligini tekshirgich HOEGERT HT8G427</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>1 120 000 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-22"></div>
+                        <div class="text-sales">
+                            <p>THINKTOOL Master 2, yengil avtomobillar uchun</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>19 689 600 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-23"></div>
+                        <div class="text-sales">
+                            <p>VSP-600 video endoskopi</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>564 854 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-24"></div>
+                        <div class="text-sales">
+                            <p>Video endoskop Launch VSP-800, 5.5 mm, 2.7 TFT LCD</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>878 661 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-25"></div>
+                        <div class="text-sales">
+                            <p>Saka diskani to'g'rilash shinalarni o'rnatish</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>33 891 210 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                    <div class="item-1_sales-div">
+                        <div class="images-uchun-26"></div>
+                        <div class="text-sales">
+                            <p>Launch x-431 Pad VII 7</p>
+                            <p style="color: red;font-size:11px;">Hozirda mavjud</p>
+                            <div>
+                                <p>32 949 788 So`m</p>
+                            </div>
+                            <button><a href="#aloqa">Batafsil</a></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="yangiliklar" class="all_services">
+            <div class="text_services">
+                <h1>Yangiliklar</h1>
+                <div class="services_icon">
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                            <path
+                                d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m48.19 121.42l24.1 21.06l-73.61 84.1l-24.1-23.06ZM191.93 342.63L121.37 272L144 249.37L214.57 320Zm65 .79L185.55 272l22.64-22.62l47.16 47.21l111.13-127.17l24.1 21.06Z" />
+                        </svg>"Yangi Yetib Keldi: Eng So'nggi Avto Ehtiyot Qismlar"</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                            <path
+                                d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m48.19 121.42l24.1 21.06l-73.61 84.1l-24.1-23.06ZM191.93 342.63L121.37 272L144 249.37L214.57 320Zm65 .79L185.55 272l22.64-22.62l47.16 47.21l111.13-127.17l24.1 21.06Z" />
+                        </svg>"Sizni Qiziqtirgan Yangi Mahsulotlar Bilan Tanishing!"</p>
+                    <h2>Chegirmalar va Aksiya:</h2>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                            <path
+                                d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m48.19 121.42l24.1 21.06l-73.61 84.1l-24.1-23.06ZM191.93 342.63L121.37 272L144 249.37L214.57 320Zm65 .79L185.55 272l22.64-22.62l47.16 47.21l111.13-127.17l24.1 21.06Z" />
+                        </svg>"Chegirmalar Haftaligi: Maxsus Narxlar Bilan Ehtiyot Qismlar!</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                            <path
+                                d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m48.19 121.42l24.1 21.06l-73.61 84.1l-24.1-23.06ZM191.93 342.63L121.37 272L144 249.37L214.57 320Zm65 .79L185.55 272l22.64-22.62l47.16 47.21l111.13-127.17l24.1 21.06Z" />
+                        </svg>"Yozgi Aksiya: 20% Gacha Chegirma Oling!"</p>
+                </div>
+            </div>
+            <div class="services_images"></div>
+        </div>
+        <div id="yordam" class="help">
+            <section class="heading-link">
+            </section>
+
+            <!-- contact section starts  -->
+
+            <section class="contact">
+
+
+                <div class="row">
+                    <div class="row">
+
+                        <section class="contact" id="contact">
+
+                            <form class="" name="submit-to-google-sheet" onsubmit="sendTelegramMessage(event)">
+                                <div class="input-box">
+                                    <input class="box" type="text" id="Name" placeholder="F.I.Sh">
+                                    <input class="box" type="email" id="Email" placeholder="Email Pochta">
+                                </div>
+                                <div class="input-box">
+                                    <input class="box" type="number" id="Number" placeholder="Mobil Qaqam">
+                                    <input class="box" type="text" id="EmailSubject" placeholder="Murojat mavzusi">
+                                </div>
+
+                                <textarea class="box" name="Massage" id="Message" cols="30" rows="10"
+                                    placeholder="Xabar"></textarea>
+                                <input type="submit" value="Yuborish" class="btn">
+                            </form>
+
+
+
+
+                            <script>
+                                function sendTelegramMessage(event) {
+                                    event.preventDefault(); // Boshqa sahifaga otishni oldini olish
+                                    const botToken = '7167065135:AAEEU3sGtlXAplU9IqgS9YZj7SbQ7YXHuj8';
+                                    const chatId = '6171556609';
+                                    const name = document.getElementById('Name').value;
+                                    const email = document.getElementById('Email').value;
+                                    const number = document.getElementById('Number').value;
+                                    const subject = document.getElementById('EmailSubject').value;
+                                    const message = document.getElementById('Message').value;
+
+                                    const text = `--------------%0AName: ${name}%0AEmail: ${email}%0ANumber: ${number}%0ASubject: ${subject}%0AXabar: ${message}%0A`;
+                                    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}`;
+                                    fetch(url)
+                                        .then(response => {
+                                            alert('Xabar yuborildi!');
+                                            // Formani tozalash
+                                            document.querySelector('form').reset();
+                                        })
+                                        .catch(error => {
+                                            alert('Xatolik yuz berdi:', error);
+                                        });
+                                }
+                            </script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+                            <script src="/js/app.js"></script>
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+        <footer id="aloqa">
+            <div class="left">
+                <img class="footer_logo" src="./avtoskanerlogo.png" alt="Logo">
+            </div>
+            <div class="right">
+                <div class="svg_footer">
+                    <p>COPYRIGHT © <a href="https://avtoskaner.uz">AvtoSkaner.uz</a>
+                    </p>
+               <a href="https://www.instagram.com/avtoskaner.uz?utm_source=qr&igsh=bDAzd3RrZ3I4eXFk"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                <g fill="none">
+                    <rect width="256" height="256" fill="url(#skillIconsInstagram0)" rx="60" />
+                    <rect width="256" height="256" fill="url(#skillIconsInstagram1)" rx="60" />
+                    <path fill="#fff"
+                        d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396c0 26.688-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413c0-26.704.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5c3.5-3.5 6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355c0 28.361 22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334c-18.41 0-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334" />
+                    <defs>
+                        <radialGradient id="skillIconsInstagram0" cx="0" cy="0" r="1"
+                            gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FD5" />
+                            <stop offset=".1" stop-color="#FD5" />
+                            <stop offset=".5" stop-color="#FF543E" />
+                            <stop offset="1" stop-color="#C837AB" />
+                        </radialGradient>
+                        <radialGradient id="skillIconsInstagram1" cx="0" cy="0" r="1"
+                            gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3771C8" />
+                            <stop offset=".128" stop-color="#3771C8" />
+                            <stop offset="1" stop-color="#60F" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                </g>
+            </svg></a>
+                    <a href="https://t.me/avtoskaneruz"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                            <defs>
+                                <linearGradient id="logosTelegram0" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#2AABEE" />
+                                    <stop offset="100%" stop-color="#229ED9" />
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#logosTelegram0)"
+                                d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51c0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0" />
+                            <path fill="#FFF"
+                                d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072" />
+                        </svg></a>
+                    <a href="tel:912217070"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path fill="#00B9B6"
+                                d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3" />
+                        </svg></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

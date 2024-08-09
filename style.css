@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e7edf0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1520px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #0E0E0F;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 50px 100px 50px 100px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 23px;
+    list-style-type: none;
+    /* Markerlarni olib tashlaydi */
+    padding: 0;
+
+}
+
+nav ul li {
+    display: inline-block;
+    /* Li elementlarini yonma-yon ko'rsatadi */
+    margin-right: 20px;
+    /* Li elementlari orasidagi masofa */
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* Havolalardagi standart chiziqni olib tashlaydi */
+    color: black;
+    /* Matn rangi */
+    padding-bottom: 3px;
+    /* Matn ostidagi bo'shliq */
+    position: relative;
+    /* Pseudo-elementlar uchun kerak */
+}
+
+nav ul li a::after {
+    content: '';
+    /* Bo'sh kontent */
+    position: absolute;
+    /* Absolyut joylashuv */
+    width: 100%;
+    /* To'liq kenglik */
+    transform: scaleX(0);
+    /* Boshlang'ich holatda ko'rinmaydi */
+    height: 2px;
+    /* Chiziq qalinligi */
+    bottom: 0;
+    /* Matn ostiga joylashadi */
+    left: 0;
+    /* Chapga hizalanadi */
+    background-color: #00B9B6;
+    /* Chiziq rangi */
+    transform-origin: bottom left;
+    /* Boshlanish nuqtasi */
+    transition: transform 0.25s ease-out;
+    /* Tranzitsiya effektlari */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    /* Hover qilinganda ko'rinadi va o'ngga harakatlanadi */
+}
+
+svg,
+li,
+button {
+    cursor: pointer;
+}
+
+nav .icons_nav {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1250px) {
+    nav ul {
+        display: flex;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: white;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul.show {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    nav .icon {
+        display: block;
+    }
+}
+
+/* Animation for the menu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hide the burger menu icon on larger screens */
+@media screen and (min-width: 1250px) {
+    nav .icon {
+        display: none;
+    }
+}
+
+
+header {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+header .text_header {
+    width: 600px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header .images_header {
+    width: 450px;
+    height: 486px;
+    background-image: url(./header_uchun-removebg-preview.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .text_header div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header .text_header div p {
+    color: #00B9B6;
+}
+
+header .text_header div h1 {
+    font-size: 48px;
+    line-height: 67.6px;
+}
+
+header .text_header button {
+    width: 196px;
+    height: 50px;
+    background-color: #00B9B6;
+    color: white;
+    border-radius: 12px;
+    border: none;
+}
+
+header .text_header button a {
+    color: white;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.maxsulotlar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sales {
+    display: flex;
+    flex-direction: column;
+}
+
+.sales-nav {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    justify-content: center;
+}
+
+.sales-nav p {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.sales-nav p:nth-child(2) {
+    font-weight: 700;
+}
+
+.sales-images {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/*  */
+
+.item-1_sales-div {
+    width: 300px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 15px 25px 0px #0000000D;
+    border-radius: 24px;
+    padding: 20px;
+}
+
+.images-uchun,
+.images-uchun-1,
+.images-uchun-2,
+.images-uchun-3,
+.images-uchun-4,
+.images-uchun-5,
+.images-uchun-6,
+.images-uchun-7,
+.images-uchun-8,
+.images-uchun-9,
+.images-uchun-10,
+.images-uchun-11,
+.images-uchun-12,
+.images-uchun-13,
+.images-uchun-14,
+.images-uchun-15,
+.images-uchun-16,
+.images-uchun-17,
+.images-uchun-18,
+.images-uchun-19,
+.images-uchun-20,
+.images-uchun-21,
+.images-uchun-22,
+.images-uchun-23,
+.images-uchun-24,
+.images-uchun-25,
+.images-uchun-26,
+.images-uchun-27,
+.images-uchun-28,
+.images-uchun-29,
+.images-uchun-30,
+.images-uchun-31,
+.images-uchun-32,
+.images-uchun-33,
+.images-uchun-34,
+.images-uchun-35,
+.images-uchun-36,
+.images-uchun-37,
+.images-uchun-38,
+.images-uchun-39,
+.images-uchun-40 {
+    width: 100%;
+    height: 334px;
+    background-image: url(./FCAR-F7S-2-1024x1024-removebg-preview.png);
+    background-size: cover;
+    background-position: center top;
+    border-radius: 12px;
+}
+
+.text-sales {
+    width: 100%;
+    height: 166px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.text-sales button {
+    width: 100px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: #00B9B6;
+}
+
+.text-sales button a {
+    color: white;
+}
+
+.text-sales div {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-sales p:nth-child(1) {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18.29px;
+}
+
+.text-sales div p:nth-child(1) {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18.29px;
+    color: #656464;
+}
+
+.text-sales div p:nth-child(2) {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18.29px;
+    color: #171717;
+}
+
+.images-uchun-1 {
+    background-image: url(./Профессиональный\ авто\ сканер\ THINKTOOL\ MAX_1.webp);
+}
+
+.images-uchun-2 {
+    background-image: url(./Thinkcar\ T-Wand\ 200\ Программатор\ датчиков\ давления\ TPMS_2.webp);
+}
+
+.images-uchun-3 {
+    background-image: url(./Диагностический\ прибор\ электромобиля\ iSmartEV\ P03\ 5in1_3.webp);
+}
+
+.images-uchun-4 {
+    background-image: url(./Стенд\ для\ тестирования\ и\ очистки\ форсунок\ Thinkcar\ GDI\ 100_4.webp);
+}
+
+.images-uchun-5 {
+    background-image: url(./THINKTOOL\ Expert\ 195\ Thinkcar\ 2024_5.webp);
+}
+
+.images-uchun-6 {
+    background-image: url(./6-raqamli\ rasm.webp);
+}
+
+.images-uchun-7 {
+    background-image: url(./stent.webp);
+}
+
+.images-uchun-8 {
+    background-image: url(./master.webp);
+    background-size: 90% 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.images-uchun-9 {
+    background-image: url(./Thinkcar\ Thinktool\ CE\ EVD\ -\ yashil\ \ .png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+}
+
+.images-uchun-10 {
+    background-image: url(./LAUNCH\ CNC\ -\ 603\ A\ .webp);
+}
+
+.images-uchun-11 {
+    background-image: url(./image.webp);
+}
+
+.images-uchun-12 {
+    background-image: url(./orginal.webp);
+}
+
+.images-uchun-13 {
+    background-image: url(./Launch\ CNC-602A\ ultra\ tovush.webp);
+}
+
+.images-uchun-14 {
+    background-image: url(./modul.webp);
+}
+
+.images-uchun-15 {
+    background-image: url(./THINKcartash.webp);
+}
+
+.images-uchun-16 {
+    background-image: url(./THINKTOOL\ MAX\ basic.webp);
+}
+
+.images-uchun-17 {
+    background-image: url(./Can-FD\ adapter.webp);
+    background-size: cover;
+}
+
+.images-uchun-18 {
+    background-image: url(./HD\ Package\ for\ THINKCAR\ Master\ 2.webp);
+    background-size: cover;
+}
+
+.images-uchun-19 {
+    background-image: url(./paket.webp);
+    background-size: cover;
+}
+
+.images-uchun-20 {
+    background-image: url(./fara_proverka.webp);
+    background-size: 100% 100%;
+}
+
+.images-uchun-21 {
+    background-image: url(./tester_color.webp);
+}
+
+.images-uchun-22 {
+    background-image: url(./thincar_8.jpg);
+    background-size: 90% 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.images-uchun-23 {
+    background-image: url(./videostr.webp);
+    background-size: 90% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.images-uchun-24 {
+    background-image: url(./images-23.webp);
+    background-size: cover;
+}
+
+.images-uchun-25 {
+    background-image: url(./sakadiska.webp);
+    background-size: cover;
+}
+
+.images-uchun-26 {
+    background-image: url(./ohiri.webp);
+    background-size: cover;
+}
+
+.sales-button {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.all_services {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.all_services .text_services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.all_services .text_services .services_icon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.all_services .text_services .services_icon p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.all_services .text_services .services_icon p svg {
+    fill: #00B9B6;
+}
+
+.all_services .services_images {
+    width: 436px;
+    height: 393.7px;
+    background-image: url(./iPad.png);
+    background-position: center left 52px;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:829.9px) {
+    .item-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .all_services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1289.9px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:635px) {
+    .services_images {
+        display: none;
+    }
+
+    .wrapper {
+        padding: 0px;
+    }
+}
+
+.contact .icons-container {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.contact .icons-container .icons {
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 0.1rem solid #00B9B6;
+    background: #f0fdfa;
+}
+
+.contact .icons-container .icons i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    background: #00B9B6;
+}
+
+.contact .icons-container .icons h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    padding: 0.5rem 0;
+}
+
+.contact .icons-container .icons p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #777;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.contact .row .image {
+    flex: 1 1 40rem;
+}
+
+.contact .row .image img {
+    width: 100%;
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+    border: 0.1rem solid #00B9B6;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.contact .row form h3 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: #444;
+    padding-bottom: 1rem;
+}
+
+.contact .row form .box {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border: 0.1rem solid #00B9B6;
+    font-size: 1.6rem;
+    margin: 0.7rem 0;
+    border-radius: 12px;
+}
+
+.contact .row form .box:focus {
+    background: #00B9B6;
+    color: #fff;
+}
+
+.contact .row form .box:focus::placeholder {
+    color: #eee;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.image {
+    flex: 1 1 40rem;
+}
+
+.image img {
+    width: 100%;
+}
+
+.btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    background-color: #00B9B6;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+footer .left .footer_logo{
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+footer .left ul{
+    display: flex;
+    list-style: none;
+    gap:  30px;
+}
+.right .svg_footer{
+    display: flex;  
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.svg_footer a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.svg_footer p{
+    display: flex;
+}
+@media screen and (max-width:477px) {
+    header .images_header {
+        background-size: 90% 90%;
+    }
+    header .text_header div h1{
+        font-size: 38px;
+        line-height: 57.6px;
+    }
+    header .text_header{
+        gap: 10px;
+    }
+}
+@media screen and (max-width:377px) {
+    header .text_header div h1{
+        font-size: 30px;
+        line-height: 40.6px;
+    }
+}
+@media screen and (max-width:346px) {
+    .wrapper{
+        width: 345px;
+    }
+}
